@@ -61,4 +61,16 @@ void RequestPickup()
     remoteControl.ClearWaypoints();
     remoteControl.AddWaypoint(hoverPosition, "Hover Point");
     remoteControl.SetAutoPilotEnabled(true);
+
+    // Wait for the flying vehicle to reach the target hover position
+    while (remoteControl.IsAutoPilotEnabled)
+    {
+        System.Threading.Thread.Sleep(100); // Wait for 0.1 seconds
+    }
+
+    // Descend to the drop-off altitude
+    Vector3D dropoffPosition = playerPosition + new Vector3D(0, 50f, 0);
+    remoteControl.ClearWaypoints();
+    remoteControl.AddWaypoint(dropoffPosition, "Drop-off Point");
+    remoteControl.SetAutoPilotEnabled(true);
 }
