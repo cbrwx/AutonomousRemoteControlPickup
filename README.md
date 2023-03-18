@@ -1,5 +1,7 @@
 # Autonomous Remote Control Pickup Script for Space Engineers
-This script is designed for a remote control flying vehicle in the space exploration game "Space Engineers". The script allows the player to request a pickup and the vehicle will autonomously fly to the player's location and hover above them.
+When the script is triggered with the "request_pickup" argument, it uses the remote control block to get the player's current position and calculates a hover position 200 meters above the player. The script then ascends the flying vehicle to the hover altitude, checking for obstacles along the way using raycasting. Once the flying vehicle reaches the hover position, it hovers in place until the autopilot is disabled.
+
+Next, the script calculates a drop-off position 50 meters above the player's current position and sets the autopilot to descend to that location. The script then waits until the autopilot is disabled before ending.
 
 # Setup
 To use this script, you will need to have a remote control block and a radio antenna block on the flying vehicle. Additionally, the "IncreaseAltitude" action needs to be assigned to a control on the remote control block in the game's control panel.
