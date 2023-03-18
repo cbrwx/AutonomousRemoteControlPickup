@@ -21,3 +21,5 @@ The script can be customized by modifying the HoverAltitude and RaycastDistance 
 # Notes
 Make sure that the flying vehicle has enough power and fuel to make the trip to the player's location and hover for an extended period of time.
 If the vehicle does not have enough power or fuel, it may crash or fall out of the sky while attempting to hover.
+
+.cbrwx
